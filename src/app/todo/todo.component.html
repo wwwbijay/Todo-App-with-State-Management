@@ -1,0 +1,15 @@
+<div>
+  <div class="container">
+    <h2>Let's get things done!</h2>
+
+    <input type="text" name="" id="" [(ngModel)]="todo" />
+    <input type="button" value="Add Todo" (click)="addTodo()" />
+
+    <ul>
+      <li (click)="removeTodo(todo)" *ngFor="let todo of allTodos$ | async">
+        <input type="checkbox" />
+        <label>{{ todo.content }}</label>
+      </li>
+    </ul>
+  </div>
+</div>
